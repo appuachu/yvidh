@@ -1,0 +1,673 @@
+{% load static %}
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <title>YVIDH2K22 </title>
+    <meta name="description" content="YVIDH2K22">
+    <meta name="author" content="Andsolutions.it">
+    <meta name="description" content="">
+
+    <link href="{% static 'css/bootstrap.min.css'%}" rel="stylesheet">
+	<link href="{% static 'css/bootstrap-theme.min.css'%}" rel="stylesheet">
+	<link href="{% static 'css/animate.min.css'%}" rel="stylesheet" >
+	<link href="{% static 'css/font-awesome.min.css'%}" rel="stylesheet">
+	<link href="{% static 'css/prettyPhoto.css'%}" rel="stylesheet">
+
+	<link href="{% static 'css/theme.css'%}" rel="stylesheet">
+	<link href="{% static 'css/responsive.css'%}" rel="stylesheet">
+	<link href="{% static 'css/colors/blue.css'%}" rel="stylesheet" class="colors">
+
+
+	<!-- Google Font -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    ``
+	<!-- Favicons -->
+    <link rel="shortcut icon" href="{% static 'images/ico/favicon.ico'%}">
+    <link rel="apple-touch-icon" href="{% static 'images/ico/apple-touch-icon.png'%}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/ico/apple-touch-icon-72.png'%}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/ico/apple-touch-icon-114.png'%}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/ico/apple-touch-icon-144.png'%}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'images/ico/apple-touch-icon-144.png'%}">
+
+</head>
+
+<body data-spy="scroll" data-target="#mynav" data-offset="85">
+
+<!-- Preloader -->
+<div id="preloader">
+	<div id="status">
+		<div class="spinner">
+			  <div class="rect1"></div>
+			  <div class="rect2"></div>
+			  <div class="rect3"></div>
+			  <div class="rect4"></div>
+			  <div class="rect5"></div>
+		</div>
+	</div>
+</div>
+<!-- End Preloader -->
+
+<header>
+
+<!-- Depiction Menu -->
+<div id="navigation">
+	<div class="navbar-wrapper">
+		<nav class="navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#"></a>
+					</div>
+					<div id="mynav" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav main-nav-list">
+							<li><a href="#home">Home</a></li>
+							<li><a href="#facts">FACTS</a></li>
+							<li><a href="#news">Events</a></li>
+							<li><a href="#pricing">Shows</a></li>
+							<li><a href="#works">DEPICTION</a></li>
+<!--							<li><a href="#about">ABOUT</a></li>-->
+							<li><a href="#contacts">Contact</a></li>
+							{% if user.is_authenticated %}
+							<li><a href="/account/logout">Logout</a></li>
+							{% else %}
+							<li><a href="/account/login">Login</a></li>
+							{% endif %}
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+<!-- End Bootstrap Menu -->
+
+<!-- Slider -->
+<section id="home">
+	<div class="slide-wrap">
+		<div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+			<div class="carousel-inner">
+				<img src="images/logo-final.png" style="position: relative; right: 850px;">
+				<div class="item active"> <!-- Change Image -->
+					<div class="caption">
+						<h1 class="animated fadeInLeftBig" style="font-family:Nasalization;"><strong>YVIDH'22</strong></h1>
+						<a data-scroll class="learn-more animated fadeInUpBig" href="#news">Start now</a>
+					</div>
+				</div>
+<!--				<div class="item"> &lt;!&ndash; Change Image &ndash;&gt;-->
+<!--					<div class="caption">-->
+<!--						<h1 class="animated fadeInLeftBig"><strong>Creative</strong> and passion</h1>-->
+<!--						<a data-scroll class="learn-more animated fadeInUpBig" href="account/register">Register now</a>-->
+<!--					</div>-->
+<!--				</div>-->
+				{% if user.is_authenticated%}
+
+				{% else %}
+				<div class="item"> <!-- Change Image -->
+					<div class="caption">
+						<h1 class="animated fadeInLeftBig">Ready to <strong>Start</strong></h1>
+						<p class="animated fadeInRightBig"></p>
+						<a data-scroll class="learn-more animated fadeInUpBig" href="account/register">Register now</a>
+					</div>
+				</div>
+
+			</div>
+			<a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+			<a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+   		 </div>
+		{% endif %}
+	</div>
+</section>
+<!-- End Slider -->
+
+</header>
+
+	<!-- End About Xlight -->
+
+	<!-- Facts -->
+<section class="section-wrapper" id="facts">
+	<div class="facts parallax">
+		<div class="overlay">
+			<div class="wrapper-block-facts">
+				<div class="container">
+					<div class="row">
+						<div class="element-title">
+							<h1 class="main-color wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms" style="font-size:40px;font-family:Brush Script MT;"> St.Thomas College of Engineering</h1>
+							<h3 class="white-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms" style="font-family:Comic Sans MS;">We are hosting</h3>
+						</div>
+					</div>
+					<div class="row" class="postion:relative; left=50px">
+						<div class="wrapper-number">
+							<div class="col-lg-3 col-md-3">
+								<div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+									<p class="timer" data-from="0" data-to="30" data-speed="2000">35</p>
+								</div>
+								<div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+									EVENTS
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3">
+								<div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="450ms">
+									<p class="timer" data-from="0" data-to="10" data-speed="2000">10</p>
+								</div>
+								<div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="450ms">
+									WORKSHOPS
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3">
+								<div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="600ms">
+									<p class="timer" data-from="0" data-to="4" data-speed="2000">4</p>
+								</div>
+								<div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">
+									SHOWS
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-3">
+								<div class="number wow fadeInRight" data-wow-duration="1s" data-wow-delay="600ms">
+									<p class="timer" data-from="0" data-to="6" data-speed="2000">6</p>
+								</div>
+								<div class="number-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">
+									CULTURALS
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<!-- End Facts -->
+
+<!-- News Section -->
+<section class="section-wrapper" id="news">
+	<div class="news">
+		<!-- Block Title -->
+		<div class="element-title">
+			<div class="row">
+				<div class="container">
+					<div class="section-title wow fadeInDown">
+						<h1><span>Events</span></h1>
+					</div>
+					<h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Keep in Touch With Our <span class="main-color"></span>Events</h3>
+				</div>
+			</div>
+		</div>
+		<!-- End Block Title -->
+		<div class="container">
+			<div class="wrapper-news">
+				<div class="row">
+					<div class="col-lg-6 col-sm-6">
+						{% for l in event %}
+						<div class="news-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="300ms">
+							<div class="entry-header">
+								{% if user.is_authenticated %}
+								<div class="blog-image">
+									<a href="{% url 'details' l.id %}"><img alt="" src="{{l.image_event.url}}" class="img-responsive"></a>
+								</div>
+								{% else %}
+								<div class="blog-image">
+									<a href="account/login"><img alt="" src="{{l.image_event.url}}" class="img-responsive"></a>
+								</div>
+								{% endif %}
+								<div class="post-date">
+									<h2>{{l.date_event}}<span>{{l.month_event}}</span></h2>
+								</div>
+							</div>
+							<div class="entry-content">
+								<h1>{{l.event_name}}</h1>
+								<!-- <h3 class="entry-title">
+									<a href="blog.html">Adipisicing elit, sed do eiusmod tempor</a>
+								</h3>
+								<ul class="entry-meta">
+								<li><a href="#"><i class="fa fa-user"></i> By: Admin <span>/</span></a></li>
+								<li><a href="#"><i class="fa fa-tags"></i> Projects <span>/</span></a></li>
+								<li><a href="#"><i class="fa fa-comments"></i> 3 Comments</a></li>
+								</ul> -->
+								<p>{{l.description_event|truncatewords:18}} </p>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+
+</section>
+<!-- End News Section -->
+
+<!-- End About Section -->
+
+<!-- Team Section -->
+<!--  -->
+<!-- End Team Section -->
+
+
+
+
+<!-- Price Section -->
+<section class="section-wrapper" id="pricing">
+	<div class="pricing">
+		<!-- Block Title -->
+		<div class="element-title">
+			<div class="row">
+				<div class="container">
+					<div class="section-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+						<h1><span>Shows</span></h1>
+					</div>
+					 <h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Our Shows</h1>
+					<h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Check Out <span class="main-color">Latest</span> Shows</h3>
+				</div>
+			</div>
+		</div>
+		<!-- End Block Title -->
+		<div class="row">
+			<div class="container">
+				<div class="wrapper-pricing">
+					<!-- Plan 1 -->
+					<div class="col-lg-3 col-md-3">
+						<div class="single-table wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+						<h4>Starter</h4>
+							<div class="price-icon">
+								<img src="{% static '../static/OIP_5_kwA1IIt.jpg'%}" width="" height="">
+                                <i class="fa fa-paper-plane"></i>
+
+                            </div>
+							<span class="price">$19/<small>m</small></span>
+							<ul>
+                                <li>Up to 3 Users</li>
+                                <li>Max 30 items</li>
+                                <li>Unlimited QueriesFull </li>
+                                <li>Statistics</li>
+                                <li>Great Support</li>
+                            </ul>
+							<a class="btn-price" href="#">Get This Plan</a>
+						</div>
+					</div>
+					<!-- Plan 2 -->
+					<div class="col-lg-3 col-md-3">
+						<div class="single-table wow fadeInRight" data-wow-duration="1s" data-wow-delay="500ms">
+						<h4>Medium</h4>
+							<div class="price-icon">
+                                <i class="fa fa-rocket"></i>
+                            </div>
+							<span class="price">$69/<small>m</small></span>
+							<ul>
+                                <li>Up to 5 Users</li>
+                                <li>Max 50 items</li>
+                                <li>Unlimited QueriesFull </li>
+                                <li>Statistics</li>
+                                <li>Great Support</li>
+                            </ul>
+							<a class="btn-price" href="#">Get This Plan</a>
+						</div>
+					</div>
+					<!-- Plan 3 -->
+					<div class="col-lg-3 col-md-3 wow fadeInRight" data-wow-duration="1s" data-wow-delay="700ms">
+						<div class="single-table featured">
+						<h4>Business</h4>
+							<div class="price-icon">
+                                <i class="fa fa-line-chart"></i>
+                            </div>
+							<span class="price">$99/<small>m</small></span>
+							<ul>
+                                <li>Up to 30 Users</li>
+                                <li>Max 300 items</li>
+                                <li>Unlimited QueriesFull </li>
+                                <li>Statistics</li>
+                                <li>Great Support</li>
+                            </ul>
+							<a class="btn-price" href="#">Get This Plan</a>
+						</div>
+					</div>
+					<!-- Plan 4 -->
+					<div class="col-lg-3 col-md-3">
+						<div class="single-table wow fadeInRight" data-wow-duration="1s" data-wow-delay="900ms">
+						<h4>Professional</h4>
+							<div class="price-icon">
+                                <i class="fa fa-road"></i>
+                            </div>
+							<span class="price">$120/<small>m</small></span>
+							<ul>
+                                <li>Up to 100 Users</li>
+                                <li>Max 500 items</li>
+                                <li>Unlimited QueriesFull </li>
+                                <li>Statistics</li>
+                                <li>Great Support</li>
+                            </ul>
+							<a class="btn-price" href="#">Get This Plan</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="clients parallax">
+		<!-- Block Title -->
+<!--		<div class="overlay">-->
+<!--			<div class="wrapper-block-clients">-->
+<!--				<div class="element-title">-->
+<!--					<div class="row">-->
+<!--						<div class="container">-->
+<!--							<h1 class="main-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">OUR HAPPY CLIENTS</h1>-->
+<!--							<h3 class="white-color wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Lorem Ipsum is simply dummy text of the printing and typesetting</h3>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				&lt;!&ndash; End Block Title &ndash;&gt;-->
+<!--				<div class="row">-->
+<!--					<div class="container">-->
+<!--						<div class="wrapper-clients wow fadeInDown" data-wow-duration="1s" data-wow-delay="500ms">-->
+<!--							&lt;!&ndash; Start Testimonial Slider &ndash;&gt;-->
+<!--							<div class="carousel slide carousel-mod" data-ride="carousel" id="testimonial">-->
+<!--								<div class="carousel-inner">-->
+<!--									&lt;!&ndash; Testimonial #1  &ndash;&gt;-->
+<!--									<div class="item active">-->
+<!--										<div class="row">-->
+<!--											<div class="col-lg-12 col-sm-12">-->
+<!--												<div class="testimonial-inner">-->
+<!--													<img class="img-circle" src="images/clients/person_1.jpg" alt="" title="" />&lt;!&ndash; Testimonial Image  &ndash;&gt;-->
+<!--													<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>&lt;!&ndash; Tesimonial  &ndash;&gt;-->
+<!--												</div>-->
+<!--												<h5>&#45;&#45; Jamie Sun, Over Agency &#45;&#45;</h5>-->
+<!--											</div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									&lt;!&ndash; End Testimonial #1  &ndash;&gt;-->
+<!--									&lt;!&ndash; Testimonial #2  &ndash;&gt;-->
+<!--									<div class="item">-->
+<!--										<div class="row">-->
+<!--											<div class="col-lg-12 col-sm-12">-->
+<!--												<div class="testimonial-inner">-->
+<!--													<img class="img-circle" src="images/clients/person_2.jpg" alt="" title="" />-->
+<!--													<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>-->
+<!--												</div>-->
+<!--												<h5>&#45;&#45; Mike Stan, Cet Agency &#45;&#45;</h5>-->
+<!--											</div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									&lt;!&ndash; End Testimonial #2  &ndash;&gt;-->
+<!--									&lt;!&ndash; Testimonial #3  &ndash;&gt;-->
+<!--									<div class="item">-->
+<!--										<div class="row">-->
+<!--											<div class="col-lg-12 col-sm-12">-->
+<!--												<div class="testimonial-inner">-->
+<!--													<img class="img-circle" src="images/clients/person_3.jpg" alt="" title="" />-->
+<!--													<p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>-->
+<!--												</div>-->
+<!--												<h5>&#45;&#45; Jane Doe, Exit Agency &#45;&#45;</h5>-->
+<!--											</div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--									&lt;!&ndash; End Testimonial #3  &ndash;&gt;-->
+<!--								</div>-->
+<!--								<ol class="carousel-indicators">-->
+<!--									<li data-target="#testimonial" data-slide-to="0" class="active"></li>-->
+<!--									<li data-target="#testimonial" data-slide-to="1"></li>-->
+<!--									<li data-target="#testimonial" data-slide-to="2"></li>-->
+<!--								</ol>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+	</div>
+
+</section>
+<!-- End Price Section -->
+
+
+
+
+<!-- Works Section -->
+<section class="section-wrapper" id="works">
+	<div class="works">
+		<!-- Block Title -->
+		<div class="element-title">
+			<div class="row">
+				<div class="container">
+					<div class="section-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+						<h1><span>DEPICTION</span></h1>
+					</div>
+					<h1 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">EIDETIC MEMORIES</h1>
+					<h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">These Are Our <span class="main-color">Dreams</span>, Made With <span class="main-color">Love & Passion</span></h3>
+				</div>
+			</div>
+		</div>
+		<!-- End Block Title -->
+		<div class="row">
+			<div class="container-fluid">
+				<div class="wrapper-works">
+					<div class="portfoliO">
+						<ul id="filters" class="wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+						  <li><span class="filter active" data-filter="all">All</span></li>
+						  <li><span class="filter" data-filter=".category-1">IMAGES</span></li>
+						</ul>
+						<div class="portfolio-wrap">
+							{% for i in gale %}
+							<div class="myport wow fadeInDown" data-wow-duration="1s" data-wow-delay="600ms">
+
+								<div class="mix category-1 portfolio" data-myorder="1">
+									<div class="img-holder">
+										<a class="folio-read-more" href="#" data-single_url="portfolio-single-image.html" title="This is the description">
+											<img class="" src="{{i.image_gallery.url}}" alt="This is the title"> <!-- Change Image -->
+												<div class="works-overlay">
+												<div class="img-overlay"></div>
+											</div>
+											<div class="overlay-content">
+												<div class="works-overlay-category">{{i.caption_gallery}}</div>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="gap"></div>
+								<div class="gap"></div>
+							</div>
+							{% endfor %}
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- Single Project -->
+		<div id="works-single-wrap">
+			<div id="works-single">
+			</div>
+		</div>
+		<!-- End Single Project -->
+	</div>
+
+	<!-- Partners -->
+
+	<!-- End Partners -->
+
+</section>
+<!-- End Works Section -->
+
+<div class="stay-in parallax">
+	<!-- Block Title -->
+	<!-- <div class="overlay">
+		<div class="wrapper-block-stay-in">
+			<div class="element-title">
+				<div class="row">
+					<div class="container">
+						<h1 class="main-color wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">Stay in Touch</h1>
+						<h3 class="white-color wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Lorem Ipsum is simply dummy text of the printing and typesetting</h3>
+					</div>
+				</div>
+			</div> -->
+			<!-- End Block Title -->
+			<!-- <div class="signup">
+				<div class="row">
+					<div class="container">
+						<div class="sign_form wow fadeInLeft" data-wow-duration="1s" data-wow-delay="300ms">
+							 SUBSCRIPTION FORM
+								<input type="email" name="email" placeholder="Your E-MAIL Please" class="form-control input-box">
+								<input type="submit" value="Sign Up">
+								<div id="signup-error"></div>
+								<p>Promise we do not spam : )</p>
+							</form>
+							</ END SUBSCRIPTION FORM -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="container">
+					<div class="wrapper-tweet">
+						<!-- Twitter -->
+<!--						<div class="tweet wow fadeInRight" data-wow-duration="1s" data-wow-delay="700ms">-->
+<!--							<div class="col-sm-8 col-sm-offset-2">-->
+<!--								<div class="twitter-icon text-center">-->
+<!--									<i class="fa fa-twitter"></i>-->
+<!--									<h4>MyWebSite</h4>-->
+<!--								</div>-->
+<!--								<div id="twitter-carousel" class="carousel slide" data-ride="carousel">-->
+<!--									<ol class="carousel-indicators">-->
+<!--										<li data-target="#twitter-carousel" data-slide-to="0" class="active"></li>-->
+<!--										<li data-target="#twitter-carousel" data-slide-to="1"></li>-->
+<!--										<li data-target="#twitter-carousel" data-slide-to="2"></li>-->
+<!--									</ol>&lt;!&ndash; /.carousel-indicators &ndash;&gt;-->
+
+<!--									<div class="carousel-inner">-->
+<!--										<div class="item active">-->
+<!--											<p>Xlight Bootstrap Retina Flat One Page Theme <a href="#"><span>#bootstrap #retina</span> #MyWebSite</a></p>-->
+<!--										</div>-->
+<!--										<div class="item">-->
+<!--											<p>Xlight is Fully Responsive Template <a href="#"><span>#simple #elegant #responsive</span> #MyWebSite</a></p>-->
+<!--										</div>-->
+<!--										<div class="item">-->
+<!--											<p>Xlight is the best solution for your Agency <a href="#"><span>#onepagetheme #xlight</span> #MyWebSite</a></p>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+						<!-- End Twitter -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- About Xlight -->
+
+<!-- Contact Section -->
+<section class="section-wrapper" id="contacts">
+	<!-- Contacts -->
+	<div class="contacts">
+
+		<!-- Block Title -->
+		<div class="element-title">
+			<div class="row">
+				<div class="container">
+					<div class="section-title wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+						<h1><span>Contact Us</span></h1>
+					</div>
+					<h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Contact Our <span class="main-color"><a>Coordinators</a> </span> to ask & to Clarify any doubts</h3>
+				</div>
+			</div>
+		</div>
+		<!-- End Block Title -->
+	<!-- new container -->
+
+
+		<div class="container">
+			<div class="row">
+				<div class="wrapper-contacts">
+					<div class="contact_form">
+						<div class="row">
+							<div class="wrapper-contacts-icons">
+								<div class="col-xs-4 wow fadeInRight" data-wow-duration="1s" data-wow-delay="300ms">
+									<i class="fa fa-map-marker"></i>
+									<div class=""><a href="https://g.page/st--thomas-college-of-engineerin?share">St. Thomas College of Engineering & Technology</a></div>
+
+								</div>
+								<div class="col-xs-4 wow fadeInRight" data-wow-duration="1s" data-wow-delay="450ms">
+									<i class="fa fa-mobile-phone"></i>
+									<div class="">Thu - Fri 06:00 AM 08:00 PM</div>
+									<div class="">+910000000000</div>
+								</div>
+								<div class="col-xs-4 wow fadeInRight" data-wow-duration="1s" data-wow-delay="600ms">
+									<i class="fa fa-envelope-o"></i>
+									<div class="">Feel Free to Email Us</div>
+									<div class="">example@gmail.com</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Contacts -->
+
+</section>
+<!-- End Contact Section -->
+
+<!-- Footer -->
+<div class="bottom-footer">
+	<div class="container">
+		<div class="bottom-footer-center wow fadeInDown" data-wow-duration="1s" data-wow-delay="300ms">
+			<ul class="bottom-social-icons">
+				<li><a href="https://www.facebook.com/YvidhOfficial/"><i class="fa fa-facebook"></i></a></li>
+				<!-- <li><a href="#"><i class="fa fa-twitter"></i></a></li> -->
+<!--				<li><a href="#"><i class="fa fa-whatsapp"></i></a></li>-->
+				<li><a href="https://www.instagram.com/yvidh2k22/"><i class="fa fa-instagram"></i></a></li>
+				<!-- <li><a href="#"><i class="fa fa-flickr"></i></a></li> -->
+			</ul>
+		</div>
+		<div class="bottom-footer-left wow fadeInUp" data-wow-duration="1s" data-wow-delay="450ms">
+			<p><span>&#169; Copyright 2022 stthomascollege</span>  <a href="https://www.stthomascollege.ac.in">ST.Thomas</a></p>
+		</div>
+	</div>
+</div>
+<!-- End Footer -->
+
+<!-- Scroll to Top  -->
+<a href="#" class="scroll-up"><i class="fa fa-arrow-up"></i></a>
+<!-- End Scroll To Top  -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="{% static 'js/jquery.min.js'%}"></script>
+	<script src="{% static 'js/bootstrap.min.js'%}"></script>
+	<script src="{% static 'js/retina.min.js'%}"></script>
+	<script src="{% static 'js/jquery.easing.min.js'%}"></script>
+	<script src="{% static 'js/wow.min.js'%}"></script>
+	<script src="{% static 'js/waypoints.min.js'%}"></script>
+	<script src="{% static 'js/jquery.countTo.js'%}"></script>
+	<script src="{% static 'js/jquery.mixitup.min.js'%}"></script>
+	<script src="{% static 'js/jquery.prettyPhoto.js'%}"></script>
+	<script src="{% static 'js/jquery.knob.min.js'%}"></script>
+	<script src="{% static 'js/jquery.validate.min.js'%}"></script>
+	<script src="{% static 'js/custom.js'%}"></script>
+
+
+</body>
+</html>
