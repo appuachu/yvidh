@@ -9,3 +9,6 @@ admin.site.register(events,eventadmin)
 admin.site.register(shows)
 
 admin.site.register(gallery)
+
+
+admin.site.register(depevents)
