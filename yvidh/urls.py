@@ -8,5 +8,6 @@ urlpatterns = [
     path("", views.home, name="home"),
     path('details/<int:pk>/', views.eventdetails.as_view(), name='details'),
     path('search',views.searching,name="search"),
+    path('depdetails/<int:pk>/', views.depeventdetails.as_view(), name='depdetails'),
 
 ]
