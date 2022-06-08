@@ -7,14 +7,20 @@ def home(request):
     event=events.objects.all()
     gale=gallery.objects.all()
     show=shows.objects.all()
+    depevent=depevents.objects.all()
 
-    return render(request,"index.html",{'event':event,'gale':gale,'show':show})
+    return render(request,"index.html",{'event':event,'gale':gale,'show':show,'depevent':depevent})
 
 
 class eventdetails(DetailView):
     model = events
     template_name = 'event.html'
     context_object_name = 'l'
+
+class depeventdetails(DetailView):
+    model = depevents
+    template_name = 'depevent.html'
+    context_object_name = 'x'
 
 def searching(request):
     event=None
