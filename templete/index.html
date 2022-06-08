@@ -441,6 +441,65 @@
 <!--		</div>-->
 
 <!--</section>-->
+<!-- End Price Section -->
+<!-- department events-->
+<section class="section-wrapper" id="news1">
+	<div class="news">
+		<!-- Block Title -->
+		<div class="element-title">
+			<div class="row">
+				<div class="container">
+					<div class="section-title wow fadeInDown">
+						<h1><span>DEPARTMENT Events</span></h1>
+					</div>
+					<h3 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="300ms">Keep in Touch With Our <span class="main-color"></span>Events</h3>
+				</div>
+			</div>
+		</div>
+		<!-- End Block Title -->
+    <div class="container">
+			<div class="wrapper-news">
+				<div class="row">
+					<div class="col-lg-6 col-sm-6">
+						{% for j in depevent %}
+						<div class="news-content wow fadeInLeft" data-wow-duration="1s" data-wow-delay="300ms">
+							<div class="entry-header">
+								{% if user.is_authenticated %}
+								<div class="blog-image">
+									<a href="{% url 'depdetails' j.id %}"><img alt="" src="{{j.dep_image_event.url}}" class="img-responsive"></a>
+								</div>
+								{% else %}
+								<div class="blog-image">
+									<a href="account/login"><img alt="" src="{{j.dep_image_event.url}}" class="img-responsive"></a>
+								</div>
+								{% endif %}
+								<div class="post-date">
+									<h2>{{j.dep_date_event}}<span>{{j.dep_month_event}}</span></h2>
+								</div>
+							</div>
+							<div class="entry-content">
+								<h1><b>{{j.dep_event_name}}</b></h1>
+								<!-- <h3 class="entry-title">
+									<a href="blog.html">Adipisicing elit, sed do eiusmod tempor</a>
+								</h3>
+								<ul class="entry-meta">
+								<li><a href="#"><i class="fa fa-user"></i> By: Admin <span>/</span></a></li>
+								<li><a href="#"><i class="fa fa-tags"></i> Projects <span>/</span></a></li>
+								<li><a href="#"><i class="fa fa-comments"></i> 3 Comments</a></li>
+								</ul> -->
+								<p>{{j.dep_description_event|truncatewords:18}} </p>
+							</div>
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</section>
 
 
 
