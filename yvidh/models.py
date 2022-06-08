@@ -26,7 +26,29 @@ class events(models.Model):
     rule7=models.TextField()
 
 
-
+class depevents(models.Model):
+    def __str__(self):
+        return self.dep_event_name
+    dep_image_event=models.ImageField(upload_to='static')
+    dep_date_event=models.IntegerField()
+    dep_month_event=models.TextField()
+    dep_event_name=models.TextField()
+    dep_event_head=models.TextField()
+    dep_event_detail=models.TextField()
+    dep_description_event=models.TextField()
+    dep_event_coordinator=models.TextField(max_length=10)
+    dep_register_link=models.TextField()
+    dep_registration_prize=models.TextField()
+    dep_prize_pool=models.TextField()
+    dep_first_prize=models.TextField()
+    dep_second_prize=models.TextField()
+    dep_rule1=models.TextField()
+    dep_rule2=models.TextField()
+    dep_rule3=models.TextField()
+    dep_rule4=models.TextField()
+    dep_rule5=models.TextField()
+    dep_rule6=models.TextField()
+    dep_rule7=models.TextField()
 
 class gallery(models.Model):
     image_gallery=models.ImageField(upload_to='static')
